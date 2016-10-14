@@ -165,8 +165,8 @@
     <handled-path value="$PROJECT_DIR$/../react-5-2-add-react-router/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1044" />
-    <option name="y" value="189" />
+    <option name="x" value="625" />
+    <option name="y" value="121" />
     <option name="width" value="1108" />
     <option name="height" value="647" />
   </component>
@@ -562,7 +562,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1044" y="189" width="1108" height="647" extended-state="0" />
+    <frame x="625" y="121" width="1108" height="647" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22410546" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -922,14 +922,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/Examples.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/Main.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -982,6 +974,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/Examples.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
           <folding />
         </state>
       </provider>
