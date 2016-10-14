@@ -1,0 +1,1 @@
+{"version":3,"sources":["Main.jsx"],"names":[],"mappings":";;AAAA,IAAI,QAAQ,QAAQ,OAAR,CAAZ;;AAEA,IAAI,OAAO,MAAM,WAAN,CAAkB;AAC3B,UAAQ,kBAAU,CAEjB;AAH0B,CAAlB,CAAX","file":"Main.js","sourcesContent":["var React = require('react');\n\nvar Main = React.createClass({\n  render: function(){\n    \n  }\n});"]}
