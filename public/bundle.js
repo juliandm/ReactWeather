@@ -26582,15 +26582,20 @@
 	var React = __webpack_require__(1);
 	
 	var Examples = function Examples(props) {
-	       return React.createElement(
-	              'div',
-	              null,
-	              React.createElement(
-	                     'h3',
-	                     null,
-	                     'Examples Component'
-	              )
-	       );
+	  return React.createElement(
+	    'div',
+	    null,
+	    React.createElement(
+	      'h3',
+	      null,
+	      'Examples Component'
+	    ),
+	    React.createElement(
+	      'p',
+	      null,
+	      'Welcome to Github'
+	    )
+	  );
 	};
 	
 	module.exports = Examples;
