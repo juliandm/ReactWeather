@@ -24940,7 +24940,83 @@
 	var Link = _require.Link;
 	
 	
-	var Nav = function Nav(props) {
+	var Nav = React.createClass({
+	  displayName: 'Nav',
+	
+	  onSearch: function onSearch(e) {
+	    e.preventDefault();
+	    alert('Not yet');
+	  },
+	  render: function render() {
+	    return React.createElement(
+	      'div',
+	      { className: 'top-bar' },
+	      React.createElement(
+	        'div',
+	        { className: 'top-bar-left' },
+	        React.createElement(
+	          'ul',
+	          { className: 'menu' },
+	          React.createElement(
+	            'li',
+	            { className: 'menu-text' },
+	            'React Weather App'
+	          ),
+	          React.createElement(
+	            'li',
+	            null,
+	            React.createElement(
+	              Link,
+	              { to: '/', activeClassName: 'active' },
+	              'Get Weather'
+	            )
+	          ),
+	          React.createElement(
+	            'li',
+	            null,
+	            React.createElement(
+	              Link,
+	              { to: '/about' },
+	              'Get About'
+	            )
+	          ),
+	          React.createElement(
+	            'li',
+	            null,
+	            React.createElement(
+	              Link,
+	              { to: '/examples' },
+	              'Get Examples'
+	            )
+	          )
+	        )
+	      ),
+	      React.createElement(
+	        'div',
+	        { className: 'top-bar-right' },
+	        React.createElement(
+	          'form',
+	          { onSubmit: this.onSearch },
+	          React.createElement(
+	            'ul',
+	            { className: 'menu' },
+	            React.createElement(
+	              'li',
+	              null,
+	              React.createElement('input', { type: 'search', placeholder: 'Search Weather' })
+	            ),
+	            React.createElement(
+	              'li',
+	              null,
+	              React.createElement('input', { type: 'submit', className: 'button', value: 'get Weather' })
+	            )
+	          )
+	        )
+	      )
+	    );
+	  }
+	});
+	var old = function old(props) {
 	  return React.createElement(
 	    'div',
 	    null,
@@ -24948,21 +25024,6 @@
 	      'h1',
 	      null,
 	      'Navbar'
-	    ),
-	    React.createElement(
-	      Link,
-	      { to: '/', activeClassName: 'active' },
-	      'Get Weather'
-	    ),
-	    React.createElement(
-	      Link,
-	      { to: '/about' },
-	      'Get About'
-	    ),
-	    React.createElement(
-	      Link,
-	      { to: '/examples' },
-	      'Get Examples'
 	    )
 	  );
 	};
