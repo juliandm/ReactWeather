@@ -1,5 +1,5 @@
 var React = require('react');
-var {Link} = require('react-router');
+var {Link, IndexLink} = require('react-router');
 
 
 
@@ -15,13 +15,13 @@ var Nav = React.createClass({
           <ul className="menu">
             <li className="menu-text">React Weather App</li>
             <li>
-              <Link to="/" activeClassName="active">Get Weather</Link>
+              <IndexLink to="/" activeStyle={{fontWeight: 'bold'}}>Get Weather</IndexLink>
             </li>
             <li>
-              <Link to="/about">Get About</Link>
+              <Link to="/about" activeStyle={{fontWeight: 'bold'}}>Get About</Link>
             </li>
             <li>
-              <Link to="/examples">Get Examples</Link>
+              <Link to="/examples" activeStyle={{fontWeight: 'bold'}}>Get Examples</Link>
             </li>
           </ul>
         </div>{/*Comment*/}

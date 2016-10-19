@@ -24918,11 +24918,14 @@
 	    null,
 	    React.createElement(Nav, null),
 	    React.createElement(
-	      'h2',
-	      null,
-	      'Main Component'
-	    ),
-	    props.children
+	      'div',
+	      { className: 'row' },
+	      React.createElement(
+	        'div',
+	        { className: 'columns medium-6 large-4 small-centered' },
+	        props.children
+	      )
+	    )
 	  );
 	};
 	module.exports = Main;
@@ -24938,6 +24941,7 @@
 	var _require = __webpack_require__(166);
 	
 	var Link = _require.Link;
+	var IndexLink = _require.IndexLink;
 	
 	
 	var Nav = React.createClass({
@@ -24966,8 +24970,8 @@
 	            'li',
 	            null,
 	            React.createElement(
-	              Link,
-	              { to: '/', activeClassName: 'active' },
+	              IndexLink,
+	              { to: '/', activeStyle: { fontWeight: 'bold' } },
 	              'Get Weather'
 	            )
 	          ),
@@ -24976,7 +24980,7 @@
 	            null,
 	            React.createElement(
 	              Link,
-	              { to: '/about' },
+	              { to: '/about', activeStyle: { fontWeight: 'bold' } },
 	              'Get About'
 	            )
 	          ),
@@ -24985,7 +24989,7 @@
 	            null,
 	            React.createElement(
 	              Link,
-	              { to: '/examples' },
+	              { to: '/examples', activeStyle: { fontWeight: 'bold' } },
 	              'Get Examples'
 	            )
 	          )
@@ -26675,18 +26679,52 @@
 /* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
 	var React = __webpack_require__(8);
 	
 	var About = function About(props) {
 	  return React.createElement(
-	    'div',
+	    "div",
 	    null,
 	    React.createElement(
-	      'h3',
+	      "h1",
+	      { className: "text-center" },
+	      "About"
+	    ),
+	    React.createElement(
+	      "p",
 	      null,
-	      'About Component'
+	      "This a weather application, based on React"
+	    ),
+	    React.createElement(
+	      "p",
+	      null,
+	      "Here are some tools i used"
+	    ),
+	    React.createElement(
+	      "ul",
+	      null,
+	      React.createElement(
+	        "li",
+	        null,
+	        React.createElement(
+	          "a",
+	          { href: "https://facebook.github.io/react" },
+	          "React"
+	        ),
+	        " - This was the framework used"
+	      ),
+	      React.createElement(
+	        "li",
+	        null,
+	        React.createElement(
+	          "a",
+	          { href: "http://openweathermap.org" },
+	          "Open Weather Map"
+	        ),
+	        " - This is the Application to fetch the weather"
+	      )
 	    )
 	  );
 	};
@@ -26701,19 +26739,46 @@
 	
 	var React = __webpack_require__(8);
 	
+	var _require = __webpack_require__(166);
+	
+	var Link = _require.Link;
+	
+	
 	var Examples = function Examples(props) {
 	  return React.createElement(
 	    'div',
 	    null,
 	    React.createElement(
-	      'h3',
-	      null,
+	      'h1',
+	      { className: 'text-center' },
 	      'Examples Component'
 	    ),
 	    React.createElement(
 	      'p',
 	      null,
-	      'Welcome to Github'
+	      'Here are a few examples to try out '
+	    ),
+	    React.createElement(
+	      'ol',
+	      null,
+	      React.createElement(
+	        'li',
+	        null,
+	        React.createElement(
+	          Link,
+	          { to: '/?location=Philadelphia' },
+	          'Philadelphia, PA'
+	        )
+	      ),
+	      React.createElement(
+	        'li',
+	        null,
+	        React.createElement(
+	          Link,
+	          { to: '/?location=Rio' },
+	          'Rio, Brazil'
+	        )
+	      )
 	    )
 	  );
 	};
