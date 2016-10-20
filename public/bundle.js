@@ -25042,6 +25042,7 @@
 	var React = __webpack_require__(8);
 	var WeatherMessage = __webpack_require__(226);
 	var WeatherForm = __webpack_require__(227);
+	var ErrorModal = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"errorModal\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	var openWeatherMap = __webpack_require__(228);
 	
 	var Weather = React.createClass({
@@ -25054,16 +25055,22 @@
 	  },
 	  handleSearch: function handleSearch(location) {
 	    var that = this;
-	    this.setState({ isLoading: true });
+	    this.setState({
+	      isLoading: true,
+	      errorMessage: undefined
+	    });
+	
 	    openWeatherMap.getTemp(location).then(function (temp) {
 	      that.setState({
 	        location: location,
 	        temp: temp,
 	        isLoading: false
 	      });
-	    }, function (error) {
-	      that.setState({ isLoading: false });
-	      alert(error);
+	    }, function (e) {
+	      that.setState({
+	        isLoading: false,
+	        errorMessage: e.message
+	      });
 	    });
 	  },
 	
@@ -25072,6 +25079,7 @@
 	    var isLoading = _state.isLoading;
 	    var temp = _state.temp;
 	    var location = _state.location;
+	    var errorMessage = _state.errorMessage;
 	
 	
 	    function renderMessage() {
@@ -25085,6 +25093,10 @@
 	        return React.createElement(WeatherMessage, { temp: temp, location: location });
 	      }
 	    }
+	
+	    function renderError() {
+	      if (typeof errorMessage === 'String') return React.createElement(ErrorModal, null);
+	    }
 	    return React.createElement(
 	      'div',
 	      null,
@@ -25094,7 +25106,8 @@
 	        'Get Weather'
 	      ),
 	      React.createElement(WeatherForm, { onSearch: this.handleSearch }),
-	      renderMessage()
+	      renderMessage(),
+	      renderError()
 	    );
 	  }
 	});
